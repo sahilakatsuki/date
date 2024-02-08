@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my chocolateee</title>
+    <link rel="stylesheet" href="new.css" />
   </head>
   <body>
-    <div class="container">
-      <div>
-        <h1 class="header_text">Yeeyy ! Finally luckyy hehe</h1>
-      </div>
-      <div class="gif_container">
-        <img
-          src="https://i.postimg.cc/wTDG30TB/yes.gif"
-          alt="Cute animated illustration"
-        />
-      </div>
-      <button class="btn" id="yesButton" onclick="nextPage()">
-        Let's Fix a Date
-      </button>
-    </div>
+    <button class="chocolate-button">
+      <div class="crumbs"></div>
+      <span class="bar">
+        <span class="text"> Chocolate Bar</span>
+      </span>
+    </button>
+
+    <div class="instructions">Click on Chocolate</div>
+
+    <script>
+      console.clear();
+
+      const elButton = document.querySelector(".chocolate-button");
+
+      elButton.addEventListener("mousedown", (event) => {
+        if (!elButton.matches(":focus")) {
+          elButton.style.setProperty("--x", event.offsetX);
+          elButton.style.setProperty("--y", event.offsetY);
+        }
+      });
+    </script>
   </body>
 </html>
